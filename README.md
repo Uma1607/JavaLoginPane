@@ -1,1 +1,1 @@
-A Login Pane created using Java
+Create a Login pane using Java
