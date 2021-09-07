@@ -70,6 +70,8 @@ public class LoginPage {
 		JButton btnNewButton = new JButton("RESET");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// operation performed on RESET BUTTON
+				// setting username and password text fields to null --> to reset values
 				textField.setText(null);
 				passwordField.setText(null);
 			}
@@ -82,17 +84,23 @@ public class LoginPage {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				// operation performed on LOGIN BUTTON
+				//reading username from text field
 				String username = textField.getText();
 				@SuppressWarnings("deprecation")
+				//reading password from password field
 				String password = passwordField.getText();
 				
+				//checking whether entered username and password matches with the data which is already present in database here string "Hello and world"
 				if(username.contains("Hello") && password.contains("world"))
 				{
-//					System.out.println("Login Successfull");
+					// message to display if login is successful
+					System.out.println("Login Successfull");
 					JOptionPane.showMessageDialog(null,"  LOGIN SUCCESSFUL  ","LOGGED",JOptionPane.PLAIN_MESSAGE);
 				}
 				else
 				{
+					// displaying an error message when username and password does not match
 					JOptionPane.showMessageDialog(null,"  INVALID LOGIN  ","  ERROR  ",JOptionPane.ERROR_MESSAGE);
 					textField.setText(null);
 					passwordField.setText(null);
@@ -107,6 +115,8 @@ public class LoginPage {
 		JButton btnExit = new JButton("EXIT");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// using System.exit() to exit the program
+				// operation performed on EXIT BUTTON
 				System.exit(0);
 			}
 		});
